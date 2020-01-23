@@ -1,14 +1,14 @@
 package com.robomq.assignment3;
 
 public class Election {
-		private int electionId;
-		private String name , eDate , ditrict , constituency , countingDate ;
-		public Election(int electionId, String name, String eDate, String ditrict, String constituency,
+		private int electionId , Date;
+		private String name , ditrict , constituency , countingDate ;
+		public Election(int electionId, String name, int Date, String ditrict, String constituency,
 				String countingDate) {
 			super();
 			this.electionId = electionId;
 			this.name = name;
-			this.eDate = eDate;
+			this.Date = Date;
 			this.ditrict = ditrict;
 			this.constituency = constituency;
 			this.countingDate = countingDate;
@@ -25,11 +25,11 @@ public class Election {
 		public void setName(String name) {
 			this.name = name;
 		}
-		public String geteDate() {
-			return eDate;
+		public int getDate() {
+			return Date;
 		}
-		public void seteDate(String eDate) {
-			this.eDate = eDate;
+		public void setDate(int Date) {
+			this.Date = Date;
 		}
 		public String getDitrict() {
 			return ditrict;
@@ -55,7 +55,7 @@ public class Election {
 		}
 		@Override
 		public String toString() {
-			return "Election [electionId=" + electionId + ", name=" + name + ", eDate=" + eDate + ", ditrict=" + ditrict
+			return "Election [electionId=" + electionId + ", name=" + name + ", Date=" + Date + ", ditrict=" + ditrict
 					+ ", constituency=" + constituency + ", countingDate=" + countingDate + "]";
 		}
 		@Override
